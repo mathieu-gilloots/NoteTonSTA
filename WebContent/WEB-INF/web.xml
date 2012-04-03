@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee">
+
+	<display-name>NoteTonSTA</display-name>
+	
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<!-- Servlet declarations -->
+	<servlet>
+	     <servlet-name>RemoveInterventionServlet</servlet-name>
+	     <servlet-class>com.supinfo.notetonsta.servlets</servlet-class>
+	</servlet>
+	
+	<servlet>
+	     <servlet-name>RegisterSpeakerServlet</servlet-name>
+	     <servlet-class>com.supinfo.notetonsta.servlets</servlet-class>
+	</servlet>
+	
+	<servlet>
+	     <servlet-name>newInterventionServlet</servlet-name>
+	     <servlet-class>com.supinfo.notetonsta.servlets</servlet-class>
+	</servlet>
+	
+	<servlet>
+	     <servlet-name>MineInterventionsServlet</servlet-name>
+	     <servlet-class>com.supinfo.notetonsta.servlets</servlet-class>
+	</servlet>
+	
+	<servlet>
+	     <servlet-name>LogoutServlet</servlet-name>
+	     <servlet-class>com.supinfo.notetonsta.servlets</servlet-class>
+	</servlet>
+	
+	<servlet>
+	     <servlet-name>LoginServlet</servlet-name>
+	     <servlet-class>com.supinfo.notetonsta.servlets</servlet-class>
+	</servlet>
+	
+	<servlet>
+	     <servlet-name>ListIntervCampusServlet</servlet-name>
+	     <servlet-class>com.supinfo.notetonsta.servlets</servlet-class>
+	</servlet>
+	
+	<servlet>
+	     <servlet-name>ListCampusServlet</servlet-name>
+	     <servlet-class>com.supinfo.notetonsta.servlets</servlet-class>
+	</servlet>
+	
+	<servlet>
+	     <servlet-name>EvaluateInterventionServlet</servlet-name>
+	     <servlet-class>com.supinfo.notetonsta.servlets</servlet-class>
+	</servlet>
+	
+	<servlet>
+	     <servlet-name>UpdateInterventionServlet</servlet-name>
+	     <servlet-class>com.supinfo.notetonsta.servlets</servlet-class>
+	</servlet>
+	
+	<servlet>
+	     <servlet-name>viewInterventionServlet</servlet-name>
+	     <servlet-class>com.supinfo.notetonsta.servlets</servlet-class>
+	</servlet>
+	
+		
+<servlet>
+	<servlet-name>Jersey REST Service</servlet-name>
+	<servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+	<init-param>
+		<param-name>com.sun.jersey.config.property.packages</param-name>
+		<param-value>com.supinfo.notetonsta.rest</param-value>
+	</init-param>
+</servlet>
+	
+	<!-- Servlet mappings -->
+	
+	<servlet-mapping>
+	     <servlet-name>RemoveInterventionServlet</servlet-name>
+	     <url-pattern>/interventions/remove</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+	     <servlet-name>RegisterSpeakerServlet</servlet-name>
+	     <url-pattern>/speakers/register</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+	     <servlet-name>newInterventionServlet</servlet-name>
+	     <url-pattern>/interventions/new</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+	     <servlet-name>MineInterventionsServlet</servlet-name>
+	     <url-pattern>/interventions/mine</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+	     <servlet-name>LogoutServlet</servlet-name>
+	     <url-pattern>/logout</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+	     <servlet-name>LoginServlet</servlet-name>
+	     <url-pattern>/login</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+	     <servlet-name>ListIntervCampusServlet</servlet-name>
+	     <url-pattern>/ListIntervCampus</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+	     <servlet-name>ListCampusServlet</servlet-name>
+	     <url-pattern>/listCampus</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+	     <servlet-name>EvaluateInterventionServlet</servlet-name>
+	     <url-pattern>/EvaluateIntervention</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+	     <servlet-name>UpdateInterventionServlet</servlet-name>
+	     <url-pattern>/interventions/update</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+	     <servlet-name>viewInterventionServlet</servlet-name>
+	     <url-pattern>/viewIntervention</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet-mapping>
+		<servlet-name>Jersey REST Service</servlet-name>
+		<url-pattern>/rest/*</url-pattern>
+	</servlet-mapping>
+
+	
+	<!-- Other stuffs -->
+
+</web-app>
